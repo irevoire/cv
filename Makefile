@@ -1,0 +1,2 @@
+complile:
+	pdflatex main.tex
