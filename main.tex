@@ -10,7 +10,7 @@
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{green}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{orange}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.90]{geometry}
+\usepackage[scale=0.89]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -32,7 +32,7 @@
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{thomas.campistron.etu@univ-lille.fr}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\extrainfo{github @ irevoire}                 % optional, remove / comment the line if not wanted
+\extrainfo{\href{https://github.com/irevoire}{github @ irevoire}}                 % optional, remove / comment the line if not wanted
 % \photo[64pt][0.4pt]{pp}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 % \quote{Je m'intéresse particulièrement aux machines virtuelles, notamment la compilation, et au développement des langages et de leur optimisation. Depuis 2017, j'ai pris part à divers projets concernant la VM OpenSmalltalk, concernant le profiling, la garbage collection, l'optimisation de primitives et l'allocation de registres.}                                 % optional, remove / comment the line if not wanted
 
@@ -54,14 +54,14 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2017--2019}{Master Degree}{University of Lille}{France}{}{Virtualization, distributed systems, system architecture, computer architecture, compilation, cryptography}  % arguments 3 to 6 can be left empty
-\cventry{2014--2017}{Bachelor of Computer Science}{University of Lille 1}{France}{}{Oriented Objet Programming, Functionnal Programming, programming and designing of Operating Systems, optimization, langage theorie, Data-Base, coding}
+	\cventry{2017--2019}{MSc in Computer Science}{University of Lille}{France}{}{\textit{Relevant coursework:} Virtualization and cloud computing, distributed systems, system architecture, OS design and development, system programming, computer architecture, compilation, cryptography}
+\cventry{2014--2017}{BSc in Computer Science}{University of Lille 1}{France}{}{\textit{Relevant coursework:} Oriented Objet Programming, Functionnal Programming,, optimization, programming language theory, database}
 
 \section{Work Experience}
 	\cventry{Mar--Aug 2019}{Evaluation of the P4 Langage for DDOS mitigation}{Worldline}{Lille}{}{
 		Worldline is one of the European leader of digital payments.
 		 The first aim of this internship was to test a new language called P4.
-		 This language stand for Programming « Protocol-Independent Packet Processors ».
+		 This language stands for “Programming Protocol-Independent Packet Processors”.
 		 Our test case was to implement a SynCookie Proxy and to test it against handmade XDP or DPDK handmade solution.
 	}
 
@@ -69,7 +69,7 @@
 		Stormshield is an European leader in digital infrastructure security, they sell hardware firewalls.
 		My internship was about optimizing the access of the Firewall rules.
 		Rules are now accessible in readonly by multiple daemons at the same time without any mutex,
-		memory or loading time and in O(log n) instead of O(n2).
+		memory or loading time and in O(log2(n)) instead of O(n2).
 	 \begin{itemize}
 		 \item Implementing a cache based readonly system (allowing parallelization)
 		 \item Providing a first proof of concept to benchmark the new system against the current system
@@ -80,7 +80,7 @@
 
 \section{Languages}
 	\cvitemwithcomment{\textbf{C}}{ < 100 000 loc}{
-		My professionnal exprience at StormShield was almost entirely in C (some C++ to do the benchmarking).
+		My professionnal experience at StormShield was almost entirely in C (some C++ to do the benchmarking).
 		I also used a lot of C for my personal project and during my education. I worked with OpenMPI, valgrind, gdb, SDL2, AFL.
 		I also did a little bit of IoT.
 		It was my main to go language until I discovered rust.
@@ -88,12 +88,12 @@
 	\cvitemwithcomment{Ruby, Python}{< 10 000 loc}{
 		Mostly used to avoid java when it was possible or today when I need a POC fast.
 		I know how to extend ruby with C and I did a little bit of C ffi in python.
-		Though I developed a JIT compiler for a subset of a language in ruby.
+		I developed a JIT compiler for a subset of a language in ruby.
 	}
 	\cvitemwithcomment{Haskell, ASM, Go, VHDL}{< 2000 loc}{ I enjoy these languages but do not work with a lot. }
 	\cvitemwithcomment{\textbf{Rust}}{< 50 000 loc}{ 
 		I absolutely love rust. I mostly did personal project with it.
-		I developed a chip-8, brainfuck and Argh! interpretors.
+		I developed a chip-8, brainfuck and Argh! interpreters.
 		I’m also  working on a fully bare-metal (20 bytes of assembly) rust crate to easily program a \href{https://www.pjrc.com/store/teensy32.html}{teensy3.2}.
 		Currently I’m doing the Advent of Code in rust. 
 	}
@@ -102,7 +102,7 @@
 			 \begin{itemize}
 				 \item Linux (5 years): It was my main OS for a long time mostly with debian and archlinux
 				 \item FreeBSD (1 year): The FireWall during my internship at StormShield were running on FreeBSD
-					 Today I manage my personnal server on FreeBSD but I never used it as my main distribution
+					 Today I manage my personal server on FreeBSD but I never used it as my main distribution
 				 \item MacOS (2 year): My current laptop
 				 \item Development: Vim, git, ISE (one of the FPGA IDE)
 				 \item Tool: Latex
@@ -110,22 +110,22 @@
 			 \end{itemize}
 		 }
  \pagebreak
-\section{Personnal}
-	\cvitem{Interest}{
+\section{Personal}
+	\cvitem{Interests}{
 		I enjoy thinking of high performance and parallelized code.
 		I also like bare-metal embedded system (even if I’m not that good at reading the constructor specs).
-		Language is also a domain that get a lot of my attention,
-		I hope one day I’ll be able to work in the development of a langage.
+		Language is also a domain that gets a lot of my attention,
+		I hope one day I’ll be able to work as a language developper.
 	}
 	\cvitem{Travel}{
-		I love to travel, currently I was able to visit:
+		I love to travel, so far I visited:
 		\begin{itemize}
 			\item USA – Chicago: 2 months
 			\item Japan – Tokyo-Kyoto: 1 month
 			\item Ireland – Dublin: 2 weeks
 			\item Norway – Bergen: 1 week
 		\end{itemize}
-		Finally I went back to Japan for the 2 last month (September–November 2019) right after my graduation! 
+		Finally, I went back to Japan for the 2 last months (September–November 2019) right after my graduation! 
 	}
 	\cvitem{Music}{
 		I spend most of my time listening to jazz, funk, rock or metal.
