@@ -58,7 +58,7 @@
 \cventry{2014--2017}{BSc in Computer Science}{University of Lille 1}{France}{}{\textit{Relevant coursework:} Oriented Objet Programming, Functionnal Programming,, optimization, programming language theory, database}
 
 \section{Work Experience}
-	\cventry{Mar--Aug 2019}{Evaluation of the P4 Langage for DDOS mitigation}{Worldline}{Lille}{}{
+	\cventry{Mar--Aug 2019}{Evaluation of the P4 Langage for DDoS mitigation}{Worldline}{Lille}{}{
 		Worldline is one of the European leader of digital payments.
 		 The first aim of this internship was to test a new language called P4.
 		 This language stands for “Programming Protocol-Independent Packet Processors”.
@@ -66,47 +66,47 @@
 	}
 
 	\cventry{Apr--Aug 2017}{Optimizing the access of the Firewall rules}{StormShield}{Lille}{}{
-		Stormshield is an European leader in digital infrastructure security, they sell hardware firewalls.
+		Stormshield is an European leader in digital infrastructure security, they sell hardware Firewalls.
 		My internship was about optimizing the access of the Firewall rules.
 		Rules are now accessible in readonly by multiple daemons at the same time without any mutex,
-		memory or loading time and in O(log2(n)) instead of O(n2).
+		memory or loading time and in $O(log_{2}(n))$ instead of $O(n^{2})$.
 	 \begin{itemize}
 		 \item Implementing a cache based readonly system (allowing parallelization)
 		 \item Providing a first proof of concept to benchmark the new system against the current system
 		 \item Providing an API as close as possible as the old system without mutexes and faster
-		 \item Updating the C codebase to use the new system (> 20 000 loc)
+		 \item Updating the C codebase to use the new system (> 20 000 LoC)
 	\end{itemize}
 }
 
 \section{Languages}
-	\cvitemwithcomment{\textbf{C}}{ < 100 000 loc}{
+	\cvitemwithcomment{\textbf{C}}{ < 100 000 LoC}{
 		My professionnal experience at StormShield was almost entirely in C (some C++ to do the benchmarking).
 		I also used a lot of C for my personal project and during my education. I worked with OpenMPI, valgrind, gdb, SDL2, AFL.
 		I also did a little bit of IoT.
-		It was my main to go language until I discovered rust.
+		It was my main to go language until I discovered Rust.
 	}
-	\cvitemwithcomment{Ruby, Python}{< 10 000 loc}{
+	\cvitemwithcomment{Ruby, Python}{< 10 000 LoC}{
 		Mostly used to avoid java when it was possible or today when I need a POC fast.
 		I know how to extend ruby with C and I did a little bit of C ffi in python.
 		I developed a JIT compiler for a subset of a language in ruby.
 	}
-	\cvitemwithcomment{Haskell, ASM, Go, VHDL}{< 2000 loc}{ I enjoy these languages but do not work with a lot. }
-	\cvitemwithcomment{\textbf{Rust}}{< 50 000 loc}{ 
-		I absolutely love rust. I mostly did personal project with it.
+	\cvitemwithcomment{Haskell, ASM, Go, VHDL}{< 2000 LoC}{ I enjoy these languages but do not work with a lot. }
+	\cvitemwithcomment{\textbf{Rust}}{< 50 000 LoC}{ 
+		I absolutely love Rust. I mostly did personal project with it.
 		I developed a chip-8, brainfuck and Argh! interpreters.
-		I’m also  working on a fully bare-metal (20 bytes of assembly) rust crate to easily program a \href{https://www.pjrc.com/store/teensy32.html}{teensy3.2}.
-		Currently I’m doing the Advent of Code in rust. 
+		I’m also  working on a fully bare-metal (20 bytes of assembly) Rust crate to easily program a \href{https://www.pjrc.com/store/teensy32.html}{teensy3.2}.
+		Currently I’m doing the Advent of Code in Rust. 
 	}
 \section{Technologies}
 	\cvitem{Software}{
 			 \begin{itemize}
 				 \item Linux (5 years): It was my main OS for a long time mostly with debian and archlinux
-				 \item FreeBSD (1 year): The FireWall during my internship at StormShield were running on FreeBSD
+				 \item FreeBSD (1 year): The Firewall during my internship at StormShield were running on FreeBSD.
 					 Today I manage my personal server on FreeBSD but I never used it as my main distribution
 				 \item MacOS (2 year): My current laptop
-				 \item Development: Vim, git, ISE (one of the FPGA IDE)
+				 \item Development: Vim, Git, ISE (one of the FPGA IDE)
 				 \item Tool: Latex
-				 \item Adminsys: VMWare, Docker, Jails
+				 \item Adminsys: VMWare, Docker, BSD Jails
 			 \end{itemize}
 		 }
  \pagebreak
