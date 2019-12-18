@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+
+# PROVIDE: webhook
+# REQUIRE: 
+
+. /etc/rc.subr
+
+name="webhook"
+rcvar=foo_enable
+command="webhook"
+
+load_rc_config $name
+run_rc_command "$1"
