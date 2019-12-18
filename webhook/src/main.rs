@@ -3,7 +3,7 @@ use tiny_http::{Method, Response, Server};
 
 fn build(filename: &str) {
     let tmp_dir = tempdir::TempDir::new("tmp").unwrap();
-    let repo = tmp_dir.path().join("/cv");
+    let repo = tmp_dir.path().join("cv");
 
     let mut c = Command::new("git");
     c.current_dir(tmp_dir.path());
@@ -20,21 +20,26 @@ fn build(filename: &str) {
     c.status();
 }
 
+fn message(message: &str) {
+    let mut notigo = Command::new("notigo");
+    notigo.arg(message);
+    notigo.status();
+}
+
 fn main() {
     let filename = std::env::args()
         .skip(1) // skip the binary name
         .next()
         .expect("give me the path of your document");
 
-    let mut notigo = Command::new("notigo");
-    notigo.arg("cv started");
-    notigo.status();
+    message("cv started");
 
     let server = Server::http("0.0.0.0:2000").unwrap();
 
     for request in server.incoming_requests() {
         if request.method() == &Method::Post {
             build(&filename);
+            message("cv updated");
             request.respond(Response::empty(200));
         } else {
             request.respond(Response::empty(500));
