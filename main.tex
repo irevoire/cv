@@ -5,14 +5,12 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{orange}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
@@ -25,39 +23,27 @@
 
 % personal data
 \name{Thomas}{Campistron}
-%\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{125 rue Jean Jaurès}{59370 Mons-en-Barœul}{France}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+33~(0)6 99 73 07 40}                   % optional, remove / comment the line if not wanted
-%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{thomas.campistron.etu@univ-lille.fr}                               % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\address{125 rue Jean Jaurès}{59370 Mons-en-Barœul}{France}
+\phone[mobile]{+33~(0)6 99 73 07 40}                % optional, remove / comment the line if not wanted
+\email{irevoire@protonmail.ch}                      % optional, remove / comment the line if not wanted
+\homepage{http://irevoire.ovh}                      % optional, remove / comment the line if not wanted
 \extrainfo{\href{https://github.com/irevoire}{github @ irevoire}}                 % optional, remove / comment the line if not wanted
-% \photo[64pt][0.4pt]{pp}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-% \quote{Je m'intéresse particulièrement aux machines virtuelles, notamment la compilation, et au développement des langages et de leur optimisation. Depuis 2017, j'ai pris part à divers projets concernant la VM OpenSmalltalk, concernant le profiling, la garbage collection, l'optimisation de primitives et l'allocation de registres.}                                 % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-
 \section{Education}
 	\cventry{2017--2019}{MSc in Computer Science}{University of Lille}{France}{}{\textit{Relevant coursework:} Virtualization and cloud computing, distributed systems, system architecture, OS design and development, system programming, computer architecture, compilation, cryptography}
 \cventry{2014--2017}{BSc in Computer Science}{University of Lille 1}{France}{}{\textit{Relevant coursework:} Oriented Objet Programming, Functionnal Programming,, optimization, programming language theory, database}
 
 \section{Work Experience}
+	\cventry{Mar--Aug 2020}{POC on improving the paralellisation TODO}{Huawei}{Paris}{}{
+		TODO
+	}
+
 	\cventry{Mar--Aug 2019}{Evaluation of the P4 Language for DDoS mitigation}{Worldline}{Lille}{}{
 		Worldline is one of the European leader of digital payments.
 		 The first aim of this internship was to test a new language called P4.
