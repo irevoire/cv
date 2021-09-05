@@ -30,11 +30,15 @@
 
 \newcommand{\mhref}[2]{\href{#1}{\ul{#2}}}
 
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
 %-----       resume       ---------------------------------------------------------
+\fontdimen2\font=0.5ex% inter word space
+\fontdimen3\font=0.5ex% inter word stretch
+
 \makecvtitle
 
 \section{Education}
@@ -42,7 +46,7 @@
 		2014--2019\\
 		\vspace*{0.2cm}
 		\hspace*{-0.5cm}
-		\includegraphics[width=0.7cm]{univ}
+		\href{https://univ-lille.fr/}{\includegraphics[width=0.7cm]{univ}}
 	}{MSc in Computer Science}{\mhref{https://www.univ-lille.fr/}{University of Lille}}{France}{}{
 		\textit{Relevant coursework:} Virtualization, cloud computing, distributed systems, OS design, system programming, computer architecture, compilation, cryptography
 		}
@@ -51,7 +55,7 @@
 	\cventry{
 		\hspace*{-0.5cm}
 		Mar--Aug 2020\\
-		\includegraphics[width=1.7cm]{huawei}
+		\href{https://www.huawei.com/}{\includegraphics[width=1.7cm]{huawei}}
 		}{Improve the performance of \mhref{https://e.huawei.com/en/products/cloud-computing-dc/atlas/mindspore}{Mindspore}}{\mhref{https://www.huawei.com}{Huawei}}{Paris}{}{
 			\mhref{https://gitee.com/mindspore/mindspore}{MindSpore is an opensource}
 			AI computing framework that implements a lot of state of the art technologies.
@@ -67,19 +71,19 @@
 		Mar--Aug 2019\\
 		\vspace*{0.4cm}
 		\hspace*{-0.4cm}
-		\includegraphics[width=2.4cm]{worldline}
+		\href{https://worldline.com/}{\includegraphics[width=2.4cm]{worldline}}
 		}{Evaluation of the P4 Language for DDoS mitigation}{\mhref{https://worldline.com/}{Worldline}}{Lille}{}{
 			Worldline is one of the European leaders of digital payments.
 			The first aim of this internship was to test a new language called P4.
 			This language stands for “Programming Protocol-Independent Packet Processors”.
-			Our test case was to implement a SynCookie Proxy and to test it against handmade XDP or DPDK handmade solution.
+			Our test case was to implement a SynCookie Proxy and to test it against handmade XDP or DPDK solutions.
 	}
 
 	\cventry{
 		\hspace*{-0.5cm}
 		Apr--Aug 2017\\
 		\vspace*{0.2cm}
-		\includegraphics[width=1.2cm]{stormshield}
+		\href{https://www.stormshield.com/}{\includegraphics[width=1.2cm]{stormshield}}
 		}{Optimizing and storing the Firewall rules}{\mhref{https://www.stormshield.com/}{StormShield}}{Lille}{}{
 			Stormshield is a European leader in digital infrastructure security, they sell hardware Firewalls.
 			My internship was about optimizing the access to the Firewall rules.
@@ -121,11 +125,10 @@
 	\cvitem{Software}{
 			 \begin{itemize}
 				 \item Linux (7 years): Archlinux is my main OS since several years, I also used archlinux for 2 years on my server and
-					 I used ubuntu, debian and CentOS for school project from time to time.
+					 I used ubuntu, debian and CentOS for school project and still use them from time to time.
 				 \item FreeBSD (3 year): The Firewalls during my internship at StormShield were running on FreeBSD.
 					 Today I manage my personal server on FreeBSD but I never used it as my main desktop distribution.
 				 \item macOS (3 year): I have a laptop running under macOS.
-				 \item Tools: Vim, ISE, Latex, Git, Docker, BSD Jails.
 			 \end{itemize}
 		 }
  \pagebreak
