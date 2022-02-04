@@ -22,7 +22,7 @@
 
 % personal data
 \name{Thomas}{Campistron}
-\address{3 rue Claude Debussy}{59800 Fives}{France}
+\address{3 rue Claude Debussy}{59800 Lille}{France}
 \phone[mobile]{+33~(0)6 99 73 07 40}                % optional, remove / comment the line if not wanted
 \email{irevoire@protonmail.ch}                      % optional, remove / comment the line if not wanted
 \homepage{irevoire.ovh}                      % optional, remove / comment the line if not wanted
@@ -41,12 +41,13 @@
 
 \makecvtitle
 
+\vspace*{-0.1cm}
 \section{Education}
 	\cventry{
 		2014--2019\\
 		\vspace*{0.2cm}
 		\hspace*{-0.5cm}
-		\href{https://univ-lille.fr/}{\includegraphics[width=0.7cm]{univ}}
+		\href{https://univ-lille.fr/}{\includegraphics[width=1.0cm]{univ}}
 	}{MSc in Computer Science}{\mhref{https://www.univ-lille.fr/}{University of Lille}}{France}{}{
 		\textit{Relevant coursework:} Virtualization, cloud computing, distributed systems, OS design, system programming, computer architecture, compilation, cryptography
 		}
@@ -55,21 +56,24 @@
 	\cventry{
 		\hspace*{-0.5cm}
 		Mar 2021 -- Now\\
-		\vspace*{0.2cm}
-		\href{https://www.meilisearch.com/}{\includegraphics[width=1.5cm]{meilisearch}}
+		\vspace*{1.5cm}
+		\hspace*{-0.7cm}
+		\href{https://www.meilisearch.com/}{\includegraphics[width=2.0cm]{meilisearch}}
 	}{Core team developer}{\mhref{https://www.meilisearch.com/}{Meilisearch}}{Remote}{}{
 			\mhref{https://github.com/meilisearch/meilisearch}{Meilisearch is an open-source}
-			search engine written in rust. I've been hired to help the core team with all the
-			day-to-day tasks. I work as much on \mhref{https://github.com/meilisearch/meilisearch}{meilisearch}
+			search engine written in rust. I work as much on \mhref{https://github.com/meilisearch/meilisearch}{meilisearch}
 			as on \mhref{https://github.com/meilisearch/milli}{milli} (the core library of meilisearch).
-			I help keeping the codebase healthy by updating the dependencies, refactoring the code,
-			adding a formatter to the project and enforcing it with the CI, answering issues etc.
-			And obviously, most of my time is spent implementing new features. Like the
-			\mhref{https://docs.meilisearch.com/reference/api/stop_words.html}{stop-words}, the
-			\mhref{geosearch}{https://github.com/meilisearch/specifications/pull/59}.
-			I also work on the specifications of new features.
-			For some complex subjects like high availability, replication or shardings, I also read and
-			summarize scientific articles.
+			I wrote all the benchmarks, set up a CI to execute the benchmarks on each commit, and push the result to see all
+			the unexpected performance changes. I also fuzzed multiple parts of Meilisearch or milli to reproduce contributors' bugs without any dataset.
+			Here is a little list of fun things I did;
+			I implemented the indexing and searching part of the \mhref{https://docs.meilisearch.com/learn/advanced/geosearch.html\#preparing-documents-for-location-based-search}{geosearch},
+			I rewrote the parser entirely for our \mhref{https://docs.meilisearch.com/learn/advanced/filtering_and_faceted_search.html\#using-filters}{filters} and drastically improved the error messages;
+			We found two tricky bugs and one memory leak in our utilization of \mhref{http://www.lmdb.tech/doc/}{LMDB}
+			where I used \mhref{https://rr-project.org}{RR} to understand what was going wrong with this \mhref{https://github.com/LMDB/lmdb/blob/mdb.master/libraries/liblmdb/mdb.c\#L7558-L8083}{endless, hideous and goto polluted C code}.
+			\\
+			On a day-to-day basis, I work with contributors, I answer questions on github issues, discussions or our community slack channel.
+			I fix bugs, refactorize the code, create tooling, improve the CI and do everything you would expect from a developer.
+			Sometimes I read scientific articles and publications on new DBs or distributed systems.
 	}
 
 	\cventry{
@@ -89,9 +93,9 @@
 	\cventry{
 		\hspace*{-0.5cm}
 		Mar--Aug 2019\\
-		\vspace*{0.4cm}
-		\hspace*{-0.4cm}
-		\href{https://worldline.com/}{\includegraphics[width=2.4cm]{worldline}}
+		\vspace*{0.1cm}
+		% \hspace*{-0.8cm}
+		\href{https://worldline.com/}{\includegraphics[width=1.7cm]{worldline}}
 		}{Evaluation of the P4 Language for DDoS mitigation}{\mhref{https://worldline.com/}{Worldline}}{Lille}{}{
 			Worldline is one of the European leaders of digital payments.
 			The first aim of this internship was to test a new language called P4.
@@ -114,7 +118,7 @@
 
 \section{Technologies}
 	\cvitemwithcomment{\textbf{C}}{< 100 000 LoC}{
-		My professional experience at StormShield was almost entirely in C (with some ugly C++).
+		My professional experience at StormShield was almost entirely in C.
 		I also used C for some personal projects and during my education. I worked with OpenMPI, Valgrind, gdb, SDL2, AFL.
 		I did a bit of IoT with it and it was my main go-to language until I discovered Rust.
 	}
@@ -123,23 +127,21 @@
 		I know how to extend ruby with C and I did a little bit of C ffi in python.
 		I developed a \mhref{https://github.com/sophie-kaleba/turbo-air-dryer}{JIT compiler for a subset of a language in ruby}.
 	}
-	\cvitemwithcomment{Haskell, ASM, Go, HDL, lua}{< 2000 LoC}{I enjoy these languages but do not work with a lot.}
+	\cvitemwithcomment{Haskell, VHDL, Prolog}{< 2000 LoC}{I enjoyed these languages a long time ago but do not work with it. I would love to though.}
 	\cvitemwithcomment{OCaml}{< 10 000 LoC}{
 		I learned the OCaml language specifically for my last job at Huawei and apart from some little personal
 		project I used it almost exclusively for this project.
 	}
 	\cvitemwithcomment{\textbf{Rust}}{< 150 000 LoC}{
-		I absolutely love Rust.
-		I pair programmed with some friends to
-		develop a
-		\mhref{https://github.com/irevoire/teensy}{bare-metal Rust crate}
+		That’s the only language I used for the last 3 years and I plan to continue working with it for a few more years.
+		Here is some old project I did with friends or alone;
+		\mhref{https://github.com/irevoire/teensy}{A bare-metal Rust crate}
 		to easily program a \mhref{https://www.pjrc.com/store/teensy32.html}{teensy3.2}.
 		We’ve also worked on a working async \mhref{https://github.com/irevoire/mindelbrust}{subset of a Minecraft server.}
-		On my personal project, I also developed the \mhref{https://github.com/irevoire/mandelbrust}{Mandelbrot} and \mhref{https://github.com/irevoire/rulia}{Julia} set using parallelization and SIMD.
-		I developed a \mhref{https://github.com/irevoire/chrustip-8}{chip-8}, \mhref{https://github.com/irevoire/esolangs}{brainfuck, Argh! interpreters} and the
-		\mhref{https://github.com/irevoire/game_of_life}{Conway's game of life}.
+		I also developed the \mhref{https://github.com/irevoire/mandelbrust}{Mandelbrot} and \mhref{https://github.com/irevoire/rulia}{Julia set} using parallelization and SIMD.
+		I developed a \mhref{https://github.com/irevoire/chrustip-8}{chip-8}, \mhref{https://github.com/irevoire/esolangs}{brainfuck, Argh! interpreters}.
 		I also often participate in some problem-solving challenges like \mhref{https://github.com/irevoire/project_euler}{project Euler} and \mhref{https://github.com/irevoire/aoc}{advent of code}
-		(mostly 2015 and 2019) or the Google Hashcode.
+		or the Google Hashcode.
 	}
 
 \pagebreak
